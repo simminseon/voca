@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/simminseon/voca.git/static/css/main.b65d27c6.css",
+    "main.js": "/simminseon/voca.git/static/js/main.1d671ffa.js",
+    "index.html": "/simminseon/voca.git/index.html",
+    "main.b65d27c6.css.map": "/simminseon/voca.git/static/css/main.b65d27c6.css.map",
+    "main.1d671ffa.js.map": "/simminseon/voca.git/static/js/main.1d671ffa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b65d27c6.css",
+    "static/js/main.1d671ffa.js"
+  ]
+}
