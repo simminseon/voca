@@ -18,7 +18,7 @@ function VocaApp() {
                 <Route path="/createDay" element={<CreateDay />} />
                 <Route path="/deleteDay" element={<DeleteDay />} />
                 <Route path="*" element={<EmptyPage />} />
-                {/* <Route element={<EmptyPage />} /> */}
+
             </Routes>
         </BrowserRouter>
     );
