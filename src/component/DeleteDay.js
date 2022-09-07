@@ -1,27 +1,50 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useFetch from "../hooks/useFecth";
 
 export default function DeleteDay() {
     const days = useFetch("http://localhost:3001/days");
-    // const [day, setDay] = useState(days);
-    const onClickDelete = (e) => {
-        fetch(`http://localhost:3001/days/day${e.id}`, {
-            method: "DELETE",
+    // const dayday = days.map((day) => {
+    //     return day;
+    // });
+    // console.log(dayday);
+    const [test, setTest] = useState(days);
+    // console.log(dayday);
+
+    // useEffect(() => {
+    //     setTest({ ...dayday });
+    // }, [dayday]);
+    // console.log(test);
+
+    const onClickDelete = (day) => {
+        const selectedDay = days.filter((data) => {
+            return data.id === day.id;
         });
-        console.log(days);
+
+        fetch(`http://localhost:3001/days/${day.id}`, {
+            method: "DELETE",
+            body: JSON.stringify({
+                day: selectedDay,
+            }),
+        }).then((res) => {
+            if (res.ok) {
+                alert("삭제 완료!");
+                setTest({ id: 0 });
+            }
+        });
     };
 
-    // if (day.id === 0) {
-    //     return null;
-    // }
-    // console.log(day);
-    // console.log(days);
+    if (test.id === 0) {
+        return null;
+    }
+
     return (
         <>
             <ul className="list_day">
                 {days.map((day) => (
                     <li key={day.id}>
-                        <button onClick={() => onClickDelete(day)}>Day {day.day}</button>
+                        <button style={{ background: "red" }} onClick={() => onClickDelete(day)}>
+                            Day {day.day}
+                        </button>
                     </li>
                 ))}
             </ul>

@@ -3,8 +3,8 @@ import useFetch from "../hooks/useFecth";
 
 export default function Word({ word: w }) {
     // const words = useFetch(`http://localhost:3001/words`);
-    // console.log(word);
     const [word, setWords] = useState(w);
+    console.log(word);
     const [isShow, setIsShow] = useState(false);
     const [isDone, setIsDone] = useState(word.isDone);
     const toggleShow = () => {

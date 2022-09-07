@@ -1,94 +1,23 @@
 {
   "days": [
     {
-      "id": 1,
-      "day": 1
-    },
-    {
-      "id": 2,
-      "day": 2
-    },
-    {
-      "id": 3,
-      "day": 3
-    },
-    {
-      "day": 4,
-      "id": 4
-    },
-    {
-      "days": "[object Object],[object Object],[object Object],[object Object]1",
-      "id": 5
-    },
-    {
-      "days": "[object Object],[object Object],[object Object],[object Object]1",
+      "day": 6,
       "id": 6
     },
     {
-      "days": "[object Object],[object Object],[object Object],[object Object]1",
+      "day": 7,
       "id": 7
     },
     {
-      "day": 8,
+      "day": 3,
       "id": 8
     },
     {
-      "day": 9,
+      "day": 4,
       "id": 9
-    },
-    {
-      "day": 1,
-      "id": 10
-    },
-    {
-      "day": 11,
-      "id": 11
-    },
-    {
-      "day": 12,
-      "id": 12
     }
   ],
   "words": [
-    {
-      "id": 1
-    },
-    {
-      "id": 2
-    },
-    {
-      "id": 3
-    },
-    {
-      "id": 4
-    },
-    {
-      "id": 5
-    },
-    {
-      "id": 6
-    },
-    {
-      "0": {
-        "id": 1
-      },
-      "1": {
-        "id": 2
-      },
-      "2": {
-        "id": 3
-      },
-      "3": {
-        "id": 4
-      },
-      "4": {
-        "id": 5
-      },
-      "5": {
-        "id": 6
-      },
-      "id": 7
-    },
     {
       "day": "1",
       "eng": "computer",
@@ -104,166 +33,25 @@
       "id": 9
     },
     {
-      "days": [
-        {
-          "id": 1,
-          "day": 1
-        },
-        {
-          "id": 2,
-          "day": 2
-        },
-        {
-          "id": 3,
-          "day": 3
-        },
-        {
-          "day": 4,
-          "id": 4
-        }
-      ],
-      "id": 10
-    },
-    {
-      "days": [
-        {
-          "id": 1,
-          "day": 1
-        },
-        {
-          "id": 2,
-          "day": 2
-        },
-        {
-          "id": 3,
-          "day": 3
-        },
-        {
-          "day": 4,
-          "id": 4
-        }
-      ],
-      "id": 11
-    },
-    {
-      "days": [
-        {
-          "id": 1,
-          "day": 1
-        },
-        {
-          "id": 2,
-          "day": 2
-        },
-        {
-          "id": 3,
-          "day": 3
-        },
-        {
-          "day": 4,
-          "id": 4
-        }
-      ],
-      "id": 12
-    },
-    {
-      "days": [
-        {
-          "id": 1,
-          "day": 1
-        },
-        {
-          "id": 2,
-          "day": 2
-        },
-        {
-          "id": 3,
-          "day": 3
-        },
-        {
-          "day": 4,
-          "id": 4
-        }
-      ],
-      "id": 13
-    },
-    {
-      "days": [
-        {
-          "id": 1,
-          "day": 1
-        },
-        {
-          "id": 2,
-          "day": 2
-        },
-        {
-          "id": 3,
-          "day": 3
-        },
-        {
-          "day": 4,
-          "id": 4
-        }
-      ],
-      "id": 14
-    },
-    {
-      "days": "[object Object],[object Object],[object Object],[object Object]1",
-      "id": 15
-    },
-    {
-      "days": "[object Object],[object Object],[object Object],[object Object]1",
-      "id": 16
-    },
-    {
-      "days": "[object Object],[object Object],[object Object],[object Object]1",
-      "id": 17
-    },
-    {
-      "days": "[object Object],[object Object],[object Object],[object Object]1",
-      "id": 18
-    },
-    {
-      "days": "[object Object],[object Object],[object Object],[object Object]1",
-      "id": 19
-    },
-    {
-      "days": "[object Object],[object Object],[object Object],[object Object]1",
-      "id": 20
-    },
-    {
-      "days": "[object Object],[object Object],[object Object],[object Object]1",
-      "id": 21
-    },
-    {
-      "days": "[object Object],[object Object],[object Object],[object Object]1",
-      "id": 22
-    },
-    {
-      "days": "[object Object],[object Object],[object Object],[object Object]1",
-      "id": 23
-    },
-    {
-      "day": "1",
+      "day": "2",
       "eng": "computer",
       "kor": "컴퓨터",
       "isDone": false,
-      "id": 24
-    },
-    {
-      "day": "2",
-      "eng": "ㅇㄹㅇㄴ",
-      "kor": "ㅇㄴㄹㄴㅇ",
-      "isDone": false,
-      "id": 25
+      "id": 10
     },
     {
       "day": "4",
-      "eng": "ㄴㅇㄹ",
-      "kor": "ㄷㅎ",
+      "eng": "coffee",
+      "kor": "커피",
       "isDone": false,
-      "id": 27
+      "id": 11
+    },
+    {
+      "day": "5",
+      "eng": "ddd",
+      "kor": "sgegws",
+      "isDone": false,
+      "id": 12
     }
   ]
 }
