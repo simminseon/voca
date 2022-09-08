@@ -9,7 +9,7 @@ import DeleteDay from "./component/DeleteDay";
 
 function VocaApp() {
     return (
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <BrowserRouter>
             <Header />
             <Routes>
                 <Route path="/" element={<DayList />} />
@@ -18,7 +18,6 @@ function VocaApp() {
                 <Route path="/createDay" element={<CreateDay />} />
                 <Route path="/deleteDay" element={<DeleteDay />} />
                 <Route path="*" element={<EmptyPage />} />
-
             </Routes>
         </BrowserRouter>
     );
