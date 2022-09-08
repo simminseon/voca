@@ -7,7 +7,7 @@ export default function DeleteDay() {
     //     return day;
     // });
     // console.log(dayday);
-    const [test, setTest] = useState(days);
+    // const [test, setTest] = useState(days);
     // console.log(dayday);
 
     // useEffect(() => {
@@ -28,14 +28,14 @@ export default function DeleteDay() {
         }).then((res) => {
             if (res.ok) {
                 alert("삭제 완료!");
-                setTest({ id: 0 });
+                // setTest({ id: 0 });
             }
         });
     };
 
-    if (test.id === 0) {
-        return null;
-    }
+    // if (test.id === 0) {
+    //     return null;
+    // }
 
     return (
         <>
