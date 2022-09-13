@@ -11,7 +11,7 @@ export default function Word({ word: w }) {
         setIsShow(!isShow);
     };
     const toggleDone = () => {
-        fetch(`https://react-voca.herokuapp.com/words/${word.id}`, {
+        fetch(`https://react-voca.herokuapp.com/api/words/${word.id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -20,23 +20,31 @@ export default function Word({ word: w }) {
                 ...word,
                 isDone: !isDone,
             }),
-        }).then((res) => {
-            if (res.ok) {
-                setIsDone(!isDone);
-            }
-        });
+        })
+            .then((res) => {
+                return res.json();
+            })
+            .then((res) => {
+                if (res.ok) {
+                    setIsDone(!isDone);
+                }
+            });
     };
     console.log(word);
 
     const onClickDelete = () => {
         if (window.confirm("삭제 하시겠습니까?")) {
-            fetch(`https://react-voca.herokuapp.com/words/${word.id}`, {
+            fetch(`https://react-voca.herokuapp.com/api/words/${word.id}`, {
                 method: "DELETE",
-            }).then((res) => {
-                if (res.ok) {
-                    setWords({ id: 0 });
-                }
-            });
+            })
+                .then((res) => {
+                    return res.json();
+                })
+                .then((res) => {
+                    if (res.ok) {
+                        setWords({ id: 0 });
+                    }
+                });
         }
     };
 

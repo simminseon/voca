@@ -15,12 +15,16 @@ export default function CreateDay() {
             body: JSON.stringify({
                 day: days.length + 1,
             }),
-        }).then((res) => {
-            if (res.ok) {
-                alert("생성이 완료 되었습니다.");
-                navigate(`/`);
-            }
-        });
+        })
+            .then((res) => {
+                return res.json();
+            })
+            .then((res) => {
+                if (res.ok) {
+                    alert("생성이 완료 되었습니다.");
+                    navigate(`/`);
+                }
+            });
         console.log(days);
     };
 

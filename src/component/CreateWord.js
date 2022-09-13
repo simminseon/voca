@@ -14,7 +14,7 @@ export default function CreateWord() {
         e.preventDefault();
         if (!isLoading) {
             setIsLoading(true);
-            fetch("https://react-voca.herokuapp.com/words", {
+            fetch("https://react-voca.herokuapp.com/api/words", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -25,13 +25,17 @@ export default function CreateWord() {
                     kor: korRef.current.value,
                     isDone: false,
                 }),
-            }).then((res) => {
-                if (res.ok) {
-                    alert("생성이 완료 되었습니다.");
-                    navigate(`/day/${dayRef.current.value}`);
-                    setIsLoading(false);
-                }
-            });
+            })
+                .then((res) => {
+                    return res.json();
+                })
+                .then((res) => {
+                    if (res.ok) {
+                        alert("생성이 완료 되었습니다.");
+                        navigate(`/day/${dayRef.current.value}`);
+                        setIsLoading(false);
+                    }
+                });
         }
     };
 

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import useFetch from "../hooks/useFecth";
 
 export default function DeleteDay() {
-    const days = useFetch("https://react-voca.herokuapp.com/days");
+    const days = useFetch("https://react-voca.herokuapp.com/api/days");
     // const dayday = days.map((day) => {
     //     return day;
     // });
@@ -20,17 +20,21 @@ export default function DeleteDay() {
             return data.id === day.id;
         });
 
-        fetch(`https://react-voca.herokuapp.com/days/${day.id}`, {
+        fetch(`https://react-voca.herokuapp.com/api/days/${day.id}`, {
             method: "DELETE",
             body: JSON.stringify({
                 day: selectedDay,
             }),
-        }).then((res) => {
-            if (res.ok) {
-                alert("삭제 완료!");
-                // setTest({ id: 0 });
-            }
-        });
+        })
+            .then((res) => {
+                return res.json();
+            })
+            .then((res) => {
+                if (res.ok) {
+                    alert("삭제 완료!");
+                    // setTest({ id: 0 });
+                }
+            });
     };
 
     // if (test.id === 0) {
