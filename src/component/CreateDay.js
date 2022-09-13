@@ -3,11 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 export default function CreateDay() {
-    const days = useFetch("https://react-voca.herokuapp.com/days");
+    const days = useFetch("http://localhost:3001/days");
     const navigate = useNavigate();
-    // const [day, setDay] = useState([]);
+
     const onClick = () => {
-        fetch("https://react-voca.herokuapp.com/days", {
+        fetch("http://localhost:3001/days", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -15,16 +15,12 @@ export default function CreateDay() {
             body: JSON.stringify({
                 day: days.length + 1,
             }),
-        })
-            .then((res) => {
-                return res.json();
-            })
-            .then((res) => {
-                if (res.ok) {
-                    alert("생성이 완료 되었습니다.");
-                    navigate(`/`);
-                }
-            });
+        }).then((res) => {
+            if (res.ok) {
+                alert("생성이 완료 되었습니다.");
+                navigate(`/`);
+            }
+        });
         console.log(days);
     };
 

@@ -5,19 +5,7 @@ import useFetch from "../hooks/useFecth";
 
 export default function Day() {
     const { day } = useParams();
-
-    // const [words, setWords] = useState([]);
-
-    // useEffect(() => {
-    //     fetch(`https://react-voca.herokuapp.com/words?day=${day}`)
-    //         .then((res) => {
-    //             return res.json();
-    //         })
-    //         .then((data) => {
-    //             setWords(data);
-    //         });
-    // }, [day]);
-    const words = useFetch(`https://react-voca.herokuapp.com/words?day=${day}`);
+    const words = useFetch(`http://localhost:3001/words?day=${day}`);
     return (
         <>
             <h2>Day {day}</h2>

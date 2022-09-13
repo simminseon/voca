@@ -2,7 +2,7 @@ import { useState } from "react";
 import useFetch from "../hooks/useFecth";
 
 export default function Word({ word: w }) {
-    // const words = useFetch(`https://react-voca.herokuapp.com/words`);
+    // const words = useFetch(`http://localhost:3001/words`);
     const [word, setWords] = useState(w);
     console.log(word);
     const [isShow, setIsShow] = useState(false);
@@ -11,7 +11,7 @@ export default function Word({ word: w }) {
         setIsShow(!isShow);
     };
     const toggleDone = () => {
-        fetch(`https://react-voca.herokuapp.com/words/${word.id}`, {
+        fetch(`http://localhost:3001/words/${word.id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -20,21 +20,17 @@ export default function Word({ word: w }) {
                 ...word,
                 isDone: !isDone,
             }),
-        })
-            .then((res) => {
-                return res.json();
-            })
-            .then((res) => {
-                if (res.ok) {
-                    setIsDone(!isDone);
-                }
-            });
+        }).then((res) => {
+            if (res.ok) {
+                setIsDone(!isDone);
+            }
+        });
     };
     console.log(word);
 
     const onClickDelete = () => {
         if (window.confirm("삭제 하시겠습니까?")) {
-            fetch(`https://react-voca.herokuapp.com/words/${word.id}`, {
+            fetch(`http://localhost:3001/words/${word.id}`, {
                 method: "DELETE",
             })
                 .then((res) => {

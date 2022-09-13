@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import useFetch from "../hooks/useFecth";
 
 export default function CreateWord() {
-    const days = useFetch("https://react-voca.herokuapp.com/days");
+    const days = useFetch("http://localhost:3001/days");
     const [isLoading, setIsLoading] = useState(false);
     const engRef = useRef(null);
     const korRef = useRef(null);
@@ -14,7 +14,7 @@ export default function CreateWord() {
         e.preventDefault();
         if (!isLoading) {
             setIsLoading(true);
-            fetch("https://react-voca.herokuapp.com/words", {
+            fetch("http://localhost:3001/words", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -25,17 +25,13 @@ export default function CreateWord() {
                     kor: korRef.current.value,
                     isDone: false,
                 }),
-            })
-                .then((res) => {
-                    return res.json();
-                })
-                .then((res) => {
-                    if (res.ok) {
-                        alert("생성이 완료 되었습니다.");
-                        navigate(`/day/${dayRef.current.value}`);
-                        setIsLoading(false);
-                    }
-                });
+            }).then((res) => {
+                if (res.ok) {
+                    alert("생성이 완료 되었습니다.");
+                    navigate(`/day/${dayRef.current.value}`);
+                    setIsLoading(false);
+                }
+            });
         }
     };
 
