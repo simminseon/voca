@@ -1,16 +1,16 @@
 {
   "days": [
     {
-      "day": 6,
-      "id": 6
-    },
-    {
       "day": 3,
       "id": 8
     },
     {
       "day": 4,
       "id": 9
+    },
+    {
+      "day": 3,
+      "id": 10
     }
   ],
   "words": [
@@ -48,6 +48,13 @@
       "kor": "ff",
       "isDone": false,
       "id": 13
+    },
+    {
+      "day": "3",
+      "eng": "computer",
+      "kor": "컴퓨터",
+      "isDone": false,
+      "id": 14
     }
   ]
 }
