@@ -17,7 +17,7 @@ export default function Day() {
     //             setWords(data);
     //         });
     // }, [day]);
-    const words = useFetch(`https://react-voca.herokuapp.com/api/words?day=${day}`);
+    const words = useFetch(`https://react-voca.herokuapp.com/words?day=${day}`);
     return (
         <>
             <h2>Day {day}</h2>

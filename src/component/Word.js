@@ -11,7 +11,7 @@ export default function Word({ word: w }) {
         setIsShow(!isShow);
     };
     const toggleDone = () => {
-        fetch(`https://react-voca.herokuapp.com/api/words/${word.id}`, {
+        fetch(`https://react-voca.herokuapp.com/words/${word.id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -34,7 +34,7 @@ export default function Word({ word: w }) {
 
     const onClickDelete = () => {
         if (window.confirm("삭제 하시겠습니까?")) {
-            fetch(`https://react-voca.herokuapp.com/api/words/${word.id}`, {
+            fetch(`https://react-voca.herokuapp.com/words/${word.id}`, {
                 method: "DELETE",
             })
                 .then((res) => {

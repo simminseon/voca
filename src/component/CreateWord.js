@@ -14,7 +14,7 @@ export default function CreateWord() {
         e.preventDefault();
         if (!isLoading) {
             setIsLoading(true);
-            fetch("https://react-voca.herokuapp.com/api/words", {
+            fetch("https://react-voca.herokuapp.com/words", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
