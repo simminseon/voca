@@ -9,7 +9,7 @@ export default function Day() {
     // const [words, setWords] = useState([]);
 
     // useEffect(() => {
-    //     fetch(`http://localhost:3001/words?day=${day}`)
+    //     fetch(`https://react-voca.herokuapp.com/words?day=${day}`)
     //         .then((res) => {
     //             return res.json();
     //         })
@@ -17,7 +17,7 @@ export default function Day() {
     //             setWords(data);
     //         });
     // }, [day]);
-    const words = useFetch(`http://localhost:3001/words?day=${day}`);
+    const words = useFetch(`https://react-voca.herokuapp.com/words?day=${day}`);
     return (
         <>
             <h2>Day {day}</h2>

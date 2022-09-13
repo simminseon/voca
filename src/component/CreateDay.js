@@ -3,11 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 export default function CreateDay() {
-    const days = useFetch("http://localhost:3001/days");
+    const days = useFetch("https://react-voca.herokuapp.com/days");
     const navigate = useNavigate();
     // const [day, setDay] = useState([]);
     const onClick = () => {
-        fetch("http://localhost:3001/days", {
+        fetch("https://react-voca.herokuapp.com/days", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

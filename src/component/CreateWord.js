@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import useFetch from "../hooks/useFecth";
 
 export default function CreateWord() {
-    const days = useFetch("http://localhost:3001/days");
+    const days = useFetch("https://react-voca.herokuapp.com/days");
     const [isLoading, setIsLoading] = useState(false);
     const engRef = useRef(null);
     const korRef = useRef(null);
@@ -14,7 +14,7 @@ export default function CreateWord() {
         e.preventDefault();
         if (!isLoading) {
             setIsLoading(true);
-            fetch("http://localhost:3001/words", {
+            fetch("https://react-voca.herokuapp.com/words", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
