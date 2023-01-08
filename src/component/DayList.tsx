@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import useFetch from "../hooks/useFecth";
+import Button from "./Button";
 
 export interface IDay {
   day: number;
@@ -15,14 +16,14 @@ export default function DayList() {
   }
 
   return (
-    <>
-      <ul className="list_day">
-        {days.map((day) => (
-          <li key={day.id}>
-            <Link to={`./day/${day.day}`}>Day {day.day}</Link>
-          </li>
-        ))}
-      </ul>
-    </>
+    <ul className="flex flex-wrap">
+      {days.map((day) => (
+        <li key={day.id} className="pr-2.5 flex-[20%_0]">
+          <Button to={`./day/${day.day}`} theme="blue">
+            Day {day.day}
+          </Button>
+        </li>
+      ))}
+    </ul>
   );
 }

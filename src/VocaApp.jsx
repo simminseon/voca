@@ -13,14 +13,16 @@ function VocaApp() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Header />
-      <Routes>
-        <Route path="/" element={<DayList />} />
-        <Route path="/day/:day" element={<Day />} />
-        <Route path="/createWord" element={<CreateWord />} />
-        <Route path="/createDay" element={<CreateDay />} />
-        <Route path="/deleteDay" element={<DeleteDay />} />
-        <Route path="*" element={<EmptyPage />} />
-      </Routes>
+      <div className="p-10 pt-0">
+        <Routes>
+          <Route path="/" element={<DayList />} />
+          <Route path="/day/:day" element={<Day />} />
+          <Route path="/createWord" element={<CreateWord />} />
+          <Route path="/createDay" element={<CreateDay />} />
+          <Route path="/deleteDay" element={<DeleteDay />} />
+          <Route path="*" element={<EmptyPage />} />
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 }

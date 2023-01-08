@@ -65,15 +65,27 @@ export default function Word({ word: w }: IProps) {
 
   return (
     <tr className={isDone ? "off" : ""}>
-      <td>
+      <td className="h-16 border border-[#ccc] w-[10%] text-center">
         <input type="checkbox" onChange={toggleDone} checked={isDone} />
       </td>
-      <td>{word.eng}</td>
-      <td>{isShow && word.kor}</td>
+      <td className="h-16 border border-[#ccc] w-1/4 text-center">
+        {word.eng}
+      </td>
+      <td className="h-16 border border-[#ccc] w-1/4 text-center">
+        {isShow && word.kor}
+      </td>
 
-      <td>
-        <button onClick={toggleShow}>{isShow ? "숨기기" : "뜻보기"}</button>
-        <button onClick={onClickDelete} className="btn_del">
+      <td className="h-16 border border-[#ccc] w-1/4 text-center">
+        <button
+          onClick={toggleShow}
+          className="text-white bg-[#1e90ff] rounded px-4 py-2 font-bold"
+        >
+          {isShow ? "숨기기" : "뜻보기"}
+        </button>
+        <button
+          onClick={onClickDelete}
+          className="text-white bg-[#b22222] rounded px-4 py-2 font-bold ml-2"
+        >
           삭제
         </button>
       </td>

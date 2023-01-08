@@ -8,8 +8,8 @@ export default function Day() {
   const words: IWord[] = useFetch(`http://localhost:3001/words?day=${day}`);
   return (
     <>
-      <h2>Day {day}</h2>
-      <table>
+      <h2 className="pb-5 text-3xl font-bold">Day {day}</h2>
+      <table className="w-full">
         <tbody>
           {words.map((word) => (
             <Word word={word} key={word.id} />

@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useFetch from "../hooks/useFecth";
+import Button from "./Button";
 import { IDay } from "./DayList";
 
 export default function CreateWord() {
@@ -45,16 +46,26 @@ export default function CreateWord() {
   return (
     <form onSubmit={onSubmit}>
       <div className="input_area">
-        <label>Eng</label>
-        <input type="text" placeholder="computer" ref={engRef} />
+        <label className="block text-lg pb-2">Eng</label>
+        <input
+          type="text"
+          placeholder="computer"
+          ref={engRef}
+          className="border border-slate-700 h-10 w-96 px-3"
+        />
       </div>
       <div className="input_area">
-        <label>Kor</label>
-        <input type="text" placeholder="컴퓨터" ref={korRef} />
+        <label className="block text-lg py-2">Kor</label>
+        <input
+          type="text"
+          placeholder="컴퓨터"
+          ref={korRef}
+          className="border border-slate-700 h-10 w-96 px-3"
+        />
       </div>
       <div className="input_area">
-        <label>Day</label>
-        <select ref={dayRef}>
+        <label className="block text-lg py-2">Day</label>
+        <select ref={dayRef} className="border border-slate-700 h-10 w-96 px-3">
           {days.map((day) => (
             <option key={day.id} value={day.day}>
               {day.day}
@@ -62,7 +73,10 @@ export default function CreateWord() {
           ))}
         </select>
       </div>
-      <button style={{ opacity: isLoading ? 0.3 : 1 }}>
+      <button
+        className="block rounded-lg py-4 bg-blue-500 text-white font-bold text-center w-20 mt-5"
+        style={{ opacity: isLoading ? 0.3 : 1 }}
+      >
         {isLoading ? "Saving" : "저장"}
       </button>
     </form>

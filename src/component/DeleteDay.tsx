@@ -26,19 +26,17 @@ export default function DeleteDay() {
   };
 
   return (
-    <>
-      <ul className="list_day">
-        {days.map((day) => (
-          <li key={day.id}>
-            <button
-              style={{ background: "red" }}
-              onClick={() => onClickDelete(day)}
-            >
-              Day {day.day}
-            </button>
-          </li>
-        ))}
-      </ul>
-    </>
+    <ul className="flex flex-wrap">
+      {days.map((day) => (
+        <li key={day.id} className="pr-2.5 flex-[20%_0]">
+          <button
+            className="w-full rounded-lg py-4 bg-rose-500 text-white font-bold text-center"
+            onClick={() => onClickDelete(day)}
+          >
+            Day {day.day}
+          </button>
+        </li>
+      ))}
+    </ul>
   );
 }
