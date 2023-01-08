@@ -1,12 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import useFetch from "../hooks/useFecth";
+import { IDay } from "./DayList";
 
 export default function DeleteDay() {
-  const days = useFetch("http://localhost:3001/days");
+  const days: IDay[] = useFetch("http://localhost:3001/days");
   const navigate = useNavigate();
 
-  const onClickDelete = (day) => {
+  const onClickDelete = (day: IDay) => {
     const selectedDay = days.filter((data) => {
       return data.id === day.id;
     });

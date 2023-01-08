@@ -1,10 +1,10 @@
 import React from "react";
 import useFetch from "../hooks/useFecth";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { IDay } from "./DayList";
 
 export default function CreateDay() {
-  const days = useFetch("http://localhost:3001/days");
+  const days: IDay[] = useFetch("http://localhost:3001/days");
   const navigate = useNavigate();
 
   const onClick = () => {
