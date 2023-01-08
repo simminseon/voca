@@ -44,6 +44,13 @@
       "kor": "컴퓨터",
       "isDone": false,
       "id": 14
+    },
+    {
+      "day": "3",
+      "eng": "computer",
+      "kor": "컴퓨터",
+      "isDone": false,
+      "id": 15
     }
   ]
 }
