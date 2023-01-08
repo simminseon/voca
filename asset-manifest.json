@@ -1,13 +1,13 @@
 {
-  "files": {
-    "main.css": "/voca/static/css/main.640e1981.css",
-    "main.js": "/voca/static/js/main.3b091a71.js",
-    "index.html": "/voca/index.html",
-    "main.640e1981.css.map": "/voca/static/css/main.640e1981.css.map",
-    "main.3b091a71.js.map": "/voca/static/js/main.3b091a71.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.640e1981.css",
-    "static/js/main.3b091a71.js"
-  ]
+  "main.css": "/voca/static/css/main.846ba80a.chunk.css",
+  "main.js": "/voca/static/js/main.c5f85139.chunk.js",
+  "main.js.map": "/voca/static/js/main.c5f85139.chunk.js.map",
+  "static/js/1.27110643.chunk.js": "/voca/static/js/1.27110643.chunk.js",
+  "static/js/1.27110643.chunk.js.map": "/voca/static/js/1.27110643.chunk.js.map",
+  "runtime~main.js": "/voca/static/js/runtime~main.7418a8b3.js",
+  "runtime~main.js.map": "/voca/static/js/runtime~main.7418a8b3.js.map",
+  "static/css/main.846ba80a.chunk.css.map": "/voca/static/css/main.846ba80a.chunk.css.map",
+  "index.html": "/voca/index.html",
+  "precache-manifest.38bbec0547ab84f691599ab76b65d152.js": "/voca/precache-manifest.38bbec0547ab84f691599ab76b65d152.js",
+  "service-worker.js": "/voca/service-worker.js"
 }
