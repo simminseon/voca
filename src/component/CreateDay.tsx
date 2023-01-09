@@ -27,8 +27,8 @@ export default function CreateDay() {
 
   return (
     <div>
-      <h3>현재 일 수 : {days.length}일</h3>
-      <button onClick={onClick}>Day 추가</button>
+      <h3 className="text-lg font-bold">현재 일 수 : <span className="text-blue-500">{days.length}</span>일</h3>
+      <button className="block rounded-lg py-2 bg-blue-500 text-white font-bold text-center w-full mt-5 md:py-4 md:w-20" onClick={onClick}>Day 추가</button>
     </div>
   );
 }

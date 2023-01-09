@@ -51,7 +51,7 @@ export default function CreateWord() {
           type="text"
           placeholder="computer"
           ref={engRef}
-          className="border border-slate-700 h-10 w-96 px-3"
+          className="border border-slate-700 h-10 px-3 w-full md:w-96"
         />
       </div>
       <div className="input_area">
@@ -60,12 +60,12 @@ export default function CreateWord() {
           type="text"
           placeholder="컴퓨터"
           ref={korRef}
-          className="border border-slate-700 h-10 w-96 px-3"
+          className="border border-slate-700 h-10 px-3 w-full md:w-96"
         />
       </div>
       <div className="input_area">
         <label className="block text-lg py-2">Day</label>
-        <select ref={dayRef} className="border border-slate-700 h-10 w-96 px-3">
+        <select ref={dayRef} className="border border-slate-700 h-10 px-3 w-full md:w-96">
           {days.map((day) => (
             <option key={day.id} value={day.day}>
               {day.day}
@@ -74,7 +74,7 @@ export default function CreateWord() {
         </select>
       </div>
       <button
-        className="block rounded-lg py-4 bg-blue-500 text-white font-bold text-center w-20 mt-5"
+        className="block rounded-lg py-2 bg-blue-500 text-white font-bold text-center w-full mt-5 md:py-4 md:w-20"
         style={{ opacity: isLoading ? 0.3 : 1 }}
       >
         {isLoading ? "Saving" : "저장"}

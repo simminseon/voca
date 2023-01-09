@@ -16,9 +16,9 @@ export default function DayList() {
   }
 
   return (
-    <ul className="flex flex-wrap">
+    <ul className="md:flex md:flex-wrap">
       {days.map((day) => (
-        <li key={day.id} className="pr-2.5 flex-[20%_0]">
+        <li key={day.id} className="pb-2 md:pr-2.5 md:flex-[20%_0]">
           <Button to={`./day/${day.day}`} theme="blue">
             Day {day.day}
           </Button>

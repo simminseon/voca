@@ -13,7 +13,7 @@ function VocaApp() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Header />
-      <div className="p-10 pt-0">
+      <div className="p-5 pt-0 md:p-10">
         <Routes>
           <Route path="/" element={<DayList />} />
           <Route path="/day/:day" element={<Day />} />
